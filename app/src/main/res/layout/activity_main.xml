@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FF5722"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblPantalla"
+        android:layout_width="330dp"
+        android:layout_height="76dp"
+        android:text="@string/pantalla"
+        android:textAlignment="textEnd"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="349dp"
+        android:layout_height="514dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:onClick="clickNumeros"
+                android:text="@string/siete"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:onClick="clickNumeros"
+                android:text="@string/ocho"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:onClick="clickNumeros"
+                android:text="@string/nueve"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnMas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:minHeight="90dip"
+                android:onClick="clickSignos"
+                android:text="@string/mas"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="79dp">
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:text="@string/cuatro"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:onClick="clickNumeros"/>
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:text="@string/cinco"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:onClick="clickNumeros"/>
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:text="@string/seis"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:onClick="clickNumeros"/>
+
+            <Button
+                android:id="@+id/btnPor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:minHeight="90dip"
+                android:onClick="clickSignos"
+                android:text="@string/mult"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:text="@string/uno"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:onClick="clickNumeros"/>
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:text="@string/dos"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:onClick="clickNumeros"/>
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:text="@string/tres"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:onClick="clickNumeros"/>
+
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:minHeight="90dip"
+                android:text="@string/dividir"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:onClick="clickSignos"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="90dip"
+                android:onClick="clear"
+                android:text="@string/refresh"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"
+                android:minHeight="90dip"
+                android:onClick="clickNumeros"
+                android:text="@string/cero"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnPunto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#3F51B5"
+                android:enabled="false"
+                android:minHeight="90dip"
+                android:onClick="clickNumeros"
+                android:text="@string/punto"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnMenos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:minHeight="90dip"
+                android:text="@string/menos"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:onClick="clickSignos"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnIgual"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FFC107"
+                android:minHeight="90dip"
+                android:onClick="mostrarResultado"
+                android:text="@string/igual"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
