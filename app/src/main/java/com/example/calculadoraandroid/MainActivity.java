@@ -19,58 +19,35 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btn;
+        btn = findViewById(R.id.btnDiv);
+        btn.setEnabled(false);
+        btn = findViewById(R.id.btnIgual);
+        btn.setEnabled(false);
+        btn = findViewById(R.id.btnMas);
+        btn.setEnabled(false);
+        btn = findViewById(R.id.btnMenos);
+        btn.setEnabled(false);
+        btn = findViewById(R.id.btnPor);
+        btn.setEnabled(false);
     }
+
+
+    //EVENTOS DE LOS NÚMEROS.
     public void clickNumeros(View v){
         Button btn = (Button) v;
         tv = findViewById(R.id.lblPantalla);
 
-        if (cadena.equals("") == false){
-            if (oculta.charAt(oculta.length()-1) == '.' && btn.getText().equals(".")){
-                Toast.makeText(this,"No puedes poner dos '.' seguidos.",Toast.LENGTH_LONG);
-            }
-            else{
-                cadena += btn.getText();
-                oculta += btn.getText();
-                tv.setText(cadena);
+        if (btn.getText().equals(".")) btn.setEnabled(false);
 
-                //DESBLOQUEO SIGNOS
-                btn = findViewById(R.id.btnDiv);
-                btn.setEnabled(true);
-                btn = findViewById(R.id.btnIgual);
-                btn.setEnabled(true);
-                btn = findViewById(R.id.btnMas);
-                btn.setEnabled(true);
-                btn = findViewById(R.id.btnMenos);
-                btn.setEnabled(true);
-                btn = findViewById(R.id.btnPor);
-                btn.setEnabled(true);
-                btn = findViewById(R.id.btnPunto);
-                btn.setEnabled(true);
-            }
-        }
-        else{
+        cadena += btn.getText();
+        oculta += btn.getText();
+        tv.setText(cadena);
 
-            cadena += btn.getText();
-            oculta += btn.getText();
-            tv.setText(cadena);
-
-            //DESBLOQUEO SIGNOS
-            btn = findViewById(R.id.btnDiv);
-            btn.setEnabled(true);
-            btn = findViewById(R.id.btnIgual);
-            btn.setEnabled(true);
-            btn = findViewById(R.id.btnMas);
-            btn.setEnabled(true);
-            btn = findViewById(R.id.btnMenos);
-            btn.setEnabled(true);
-            btn = findViewById(R.id.btnPor);
-            btn.setEnabled(true);
-            btn = findViewById(R.id.btnPunto);
-            btn.setEnabled(true);
-        }
-
+        desbloquearSignos(btn);
     }
 
+    //EVENTOS DE LOS SIGNOS.
     public void clickSignos(View v){
         Button btn = (Button) v;
         if (btn.getText().equals("X")) oculta += "*";
@@ -79,6 +56,43 @@ public class MainActivity extends AppCompatActivity{
         tv = findViewById(R.id.lblPantalla);
         tv.setText(evaluarExpresion(oculta) + "");
 
+        bloquearSignos(btn);
+        btn = findViewById(R.id.btnPunto);
+        btn.setEnabled(true);
+    }
+
+    //EVENTO DEL SIGNO "=".
+    public void mostrarResultado(View v){
+        tv = findViewById(R.id.lblPantalla);
+        tv.setText(evaluarExpresion(oculta) + "");
+        cadena = evaluarExpresion(oculta) + "";
+        oculta = evaluarExpresion(oculta) + "";
+    }
+
+    //EVENTO DE "C".
+    public void clear(View v){
+        cadena = "";
+        oculta = "";
+        tv = findViewById(R.id.lblPantalla);
+        tv.setText("0");
+        Button btn;
+        btn = findViewById(R.id.btnDiv);
+        btn.setEnabled(false);
+        btn = findViewById(R.id.btnIgual);
+        btn.setEnabled(false);
+        btn = findViewById(R.id.btnMas);
+        btn.setEnabled(false);
+        btn = findViewById(R.id.btnMenos);
+        btn.setEnabled(false);
+        btn = findViewById(R.id.btnPor);
+        btn.setEnabled(false);
+    }
+
+
+
+
+    //FUNCIONES
+    public void bloquearSignos(Button btn){
         //BLOQUEO LOS SIGNOS
         btn = findViewById(R.id.btnDiv);
         btn.setEnabled(false);
@@ -90,22 +104,20 @@ public class MainActivity extends AppCompatActivity{
         btn.setEnabled(false);
         btn = findViewById(R.id.btnPor);
         btn.setEnabled(false);
-        btn = findViewById(R.id.btnPunto);
-        btn.setEnabled(false);
     }
 
-    public void mostrarResultado(View v){
-        tv = findViewById(R.id.lblPantalla);
-        tv.setText(evaluarExpresion(oculta) + "");
-        cadena = evaluarExpresion(oculta) + "";
-        oculta = evaluarExpresion(oculta) + "";
-    }
-
-    public void clear(View v){
-        cadena = "";
-        oculta = "";
-        tv = findViewById(R.id.lblPantalla);
-        tv.setText("0");
+    public void desbloquearSignos(Button btn){
+        //DESBLOQUEO SIGNOS
+        btn = findViewById(R.id.btnDiv);
+        btn.setEnabled(true);
+        btn = findViewById(R.id.btnIgual);
+        btn.setEnabled(true);
+        btn = findViewById(R.id.btnMas);
+        btn.setEnabled(true);
+        btn = findViewById(R.id.btnMenos);
+        btn.setEnabled(true);
+        btn = findViewById(R.id.btnPor);
+        btn.setEnabled(true);
     }
 
     public double evaluarExpresion(@NonNull String expresion) {

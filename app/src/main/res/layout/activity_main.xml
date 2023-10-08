@@ -222,7 +222,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#3F51B5"
-                android:enabled="false"
+                android:enabled="true"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/punto"
