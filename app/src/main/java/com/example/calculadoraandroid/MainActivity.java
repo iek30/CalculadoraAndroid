@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity{
     private TextView tv;
     private String cadena = "";
     private String oculta = "";
+    private Boolean primerToquePunto = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,16 +25,26 @@ public class MainActivity extends AppCompatActivity{
 
     //EVENTOS DE LOS NÚMEROS.
     public void clickNumeros(View v){
+        //Selecciono el TextView donde muestro mi texto.
         Button btn = (Button) v;
         tv = findViewById(R.id.lblPantalla);
-
-        if (btn.getText().equals(".")) btn.setEnabled(false);
 
         cadena += btn.getText();
         oculta += btn.getText();
         tv.setText(cadena);
 
         habilitarSignos(true);
+    }
+
+    public void clickPunto(View v){
+        if (esPosiblePonerPunto()){
+            Button btn = (Button) v;
+            tv = findViewById(R.id.lblPantalla);
+
+            cadena += btn.getText();
+            oculta += btn.getText();
+            tv.setText(cadena);
+        }
     }
 
     //EVENTOS DE LOS SIGNOS.
@@ -71,6 +82,12 @@ public class MainActivity extends AppCompatActivity{
 
 
     //FUNCIONES
+
+    public Boolean esPosiblePonerPunto(){
+        if(cadena.equals("") || cadena.contains(".")) return false;
+        else return true;
+    }
+
     public void habilitarSignos(Boolean flag){
         Button btn;
         btn = findViewById(R.id.btnDiv);

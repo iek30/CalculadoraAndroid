@@ -227,7 +227,7 @@
                 android:backgroundTint="#3F51B5"
                 android:enabled="true"
                 android:minHeight="90dip"
-                android:onClick="clickNumeros"
+                android:onClick="clickPunto"
                 android:text="@string/punto"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
