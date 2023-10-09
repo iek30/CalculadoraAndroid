@@ -3,11 +3,12 @@ package com.example.calculadoraandroid;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -22,6 +23,19 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
     }
 
+    public void cambiarModoNocturno(View v){
+        Switch s = findViewById(R.id.switchN);
+        if(s.isChecked()) {
+            findViewById(R.id.lyt).setBackgroundColor(getResources().getColor(R.color.black));
+            s.setText("Dark");
+            s.setTextColor(getResources().getColor(R.color.white));
+        }
+        else {
+            findViewById(R.id.lyt).setBackgroundColor(getResources().getColor(R.color.white));
+            s.setText("Light");
+            s.setTextColor(getResources().getColor(R.color.black));
+        }
+    }
 
     //EVENTOS DE LOS NÚMEROS.
     public void clickNumeros(View v){
@@ -107,7 +121,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public Boolean esPosiblePonerSignoMenos(){
-        if(cadena.equals("")) return true;
+        if(oculta.equals("")) return true;
         else return false;
     }
 
@@ -119,15 +133,19 @@ public class MainActivity extends AppCompatActivity{
         btn.setEnabled(flag);
         btn = findViewById(R.id.btnMas);
         btn.setEnabled(flag);
-        //btn = findViewById(R.id.btnMenos);
-        //btn.setEnabled(flag);
+        btn = findViewById(R.id.btnMenos);
+        btn.setEnabled(flag);
         btn = findViewById(R.id.btnPor);
         btn.setEnabled(flag);
     }
 
     public double evaluarExpresion(@NonNull String expresion) {
 
-        if (expresion.charAt(0) == '-') {
+        // Reemplaza todos los espacios en blanco
+        expresion = expresion.replaceAll("\\s+", "");
+
+        // Agrega un "+" al principio si la expresión comienza con "-"
+        if (expresion.startsWith("-")) {
             expresion = "0" + expresion;
         }
 

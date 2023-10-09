@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#FF5722"
+    android:background="#8CBDE4"
     tools:context=".MainActivity">
 
     <TextView
@@ -23,9 +24,10 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="349dp"
-        android:layout_height="514dp"
+        android:layout_width="324dp"
+        android:layout_height="493dp"
         android:layout_marginBottom="16dp"
+        android:paddingTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -96,10 +98,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FF5722"
                 android:minHeight="90dip"
+                android:onClick="clickNumeros"
                 android:text="@string/cuatro"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:onClick="clickNumeros"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btn5"
@@ -108,10 +110,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FF5722"
                 android:minHeight="90dip"
+                android:onClick="clickNumeros"
                 android:text="@string/cinco"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:onClick="clickNumeros"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btn6"
@@ -120,10 +122,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FF5722"
                 android:minHeight="90dip"
+                android:onClick="clickNumeros"
                 android:text="@string/seis"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:onClick="clickNumeros"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btnPor"
@@ -150,10 +152,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FF5722"
                 android:minHeight="90dip"
+                android:onClick="clickNumeros"
                 android:text="@string/uno"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:onClick="clickNumeros"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btn2"
@@ -162,10 +164,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FF5722"
                 android:minHeight="90dip"
+                android:onClick="clickNumeros"
                 android:text="@string/dos"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:onClick="clickNumeros"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btn3"
@@ -174,10 +176,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FF5722"
                 android:minHeight="90dip"
+                android:onClick="clickNumeros"
                 android:text="@string/tres"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:onClick="clickNumeros"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btnDiv"
@@ -266,5 +268,19 @@
 
         </TableRow>
     </TableLayout>
+
+    <Switch
+        android:id="@+id/switchN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cambiarModoNocturno"
+        android:text="Light"
+        android:textColor="#342544"
+        app:layout_constraintBottom_toTopOf="@+id/lblPantalla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.391" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
