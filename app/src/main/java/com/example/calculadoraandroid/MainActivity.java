@@ -19,17 +19,6 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btn;
-        btn = findViewById(R.id.btnDiv);
-        btn.setEnabled(false);
-        btn = findViewById(R.id.btnIgual);
-        btn.setEnabled(false);
-        btn = findViewById(R.id.btnMas);
-        btn.setEnabled(false);
-        btn = findViewById(R.id.btnMenos);
-        btn.setEnabled(false);
-        btn = findViewById(R.id.btnPor);
-        btn.setEnabled(false);
     }
 
 
@@ -44,7 +33,7 @@ public class MainActivity extends AppCompatActivity{
         oculta += btn.getText();
         tv.setText(cadena);
 
-        desbloquearSignos(btn);
+        habilitarSignos(true);
     }
 
     //EVENTOS DE LOS SIGNOS.
@@ -56,7 +45,7 @@ public class MainActivity extends AppCompatActivity{
         tv = findViewById(R.id.lblPantalla);
         tv.setText(evaluarExpresion(oculta) + "");
 
-        bloquearSignos(btn);
+        habilitarSignos(false);
         btn = findViewById(R.id.btnPunto);
         btn.setEnabled(true);
     }
@@ -75,49 +64,25 @@ public class MainActivity extends AppCompatActivity{
         oculta = "";
         tv = findViewById(R.id.lblPantalla);
         tv.setText("0");
-        Button btn;
-        btn = findViewById(R.id.btnDiv);
-        btn.setEnabled(false);
-        btn = findViewById(R.id.btnIgual);
-        btn.setEnabled(false);
-        btn = findViewById(R.id.btnMas);
-        btn.setEnabled(false);
-        btn = findViewById(R.id.btnMenos);
-        btn.setEnabled(false);
-        btn = findViewById(R.id.btnPor);
-        btn.setEnabled(false);
+        habilitarSignos(false);
     }
 
 
 
 
     //FUNCIONES
-    public void bloquearSignos(Button btn){
-        //BLOQUEO LOS SIGNOS
+    public void habilitarSignos(Boolean flag){
+        Button btn;
         btn = findViewById(R.id.btnDiv);
-        btn.setEnabled(false);
+        btn.setEnabled(flag);
         btn = findViewById(R.id.btnIgual);
-        btn.setEnabled(false);
+        btn.setEnabled(flag);
         btn = findViewById(R.id.btnMas);
-        btn.setEnabled(false);
+        btn.setEnabled(flag);
         btn = findViewById(R.id.btnMenos);
-        btn.setEnabled(false);
+        btn.setEnabled(flag);
         btn = findViewById(R.id.btnPor);
-        btn.setEnabled(false);
-    }
-
-    public void desbloquearSignos(Button btn){
-        //DESBLOQUEO SIGNOS
-        btn = findViewById(R.id.btnDiv);
-        btn.setEnabled(true);
-        btn = findViewById(R.id.btnIgual);
-        btn.setEnabled(true);
-        btn = findViewById(R.id.btnMas);
-        btn.setEnabled(true);
-        btn = findViewById(R.id.btnMenos);
-        btn.setEnabled(true);
-        btn = findViewById(R.id.btnPor);
-        btn.setEnabled(true);
+        btn.setEnabled(flag);
     }
 
     public double evaluarExpresion(@NonNull String expresion) {
