@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity{
         tv.setText(cadena);
 
         habilitarSignos(true);
+
     }
 
     public void clickPunto(View v){
@@ -50,15 +51,26 @@ public class MainActivity extends AppCompatActivity{
     //EVENTOS DE LOS SIGNOS.
     public void clickSignos(View v){
         Button btn = (Button) v;
-        if (btn.getText().equals("X")) oculta += "*";
-        else oculta += btn.getText();
-        cadena = "";
-        tv = findViewById(R.id.lblPantalla);
-        tv.setText(evaluarExpresion(oculta) + "");
 
-        habilitarSignos(false);
-        btn = findViewById(R.id.btnPunto);
-        btn.setEnabled(true);
+        if (btn.getText().equals("-") && esPosiblePonerSignoMenos()){
+            tv = findViewById(R.id.lblPantalla);
+
+            cadena += btn.getText();
+            oculta += "0-";
+            tv.setText(cadena);
+        }
+        else{
+            if (btn.getText().equals("X")) oculta += "*";
+            else oculta += btn.getText();
+            cadena = "";
+            tv = findViewById(R.id.lblPantalla);
+            tv.setText(evaluarExpresion(oculta) + "");
+
+            habilitarSignos(false);
+            btn = findViewById(R.id.btnPunto);
+            btn.setEnabled(true);
+        }
+
     }
 
     //EVENTO DEL SIGNO "=".
@@ -67,6 +79,12 @@ public class MainActivity extends AppCompatActivity{
         tv.setText(evaluarExpresion(oculta) + "");
         cadena = evaluarExpresion(oculta) + "";
         oculta = evaluarExpresion(oculta) + "";
+
+        if (oculta.equals("NaN")) {
+            cadena = "";
+            oculta = "";
+            habilitarSignos(false);
+        }
     }
 
     //EVENTO DE "C".
@@ -88,6 +106,11 @@ public class MainActivity extends AppCompatActivity{
         else return true;
     }
 
+    public Boolean esPosiblePonerSignoMenos(){
+        if(cadena.equals("")) return true;
+        else return false;
+    }
+
     public void habilitarSignos(Boolean flag){
         Button btn;
         btn = findViewById(R.id.btnDiv);
@@ -96,13 +119,18 @@ public class MainActivity extends AppCompatActivity{
         btn.setEnabled(flag);
         btn = findViewById(R.id.btnMas);
         btn.setEnabled(flag);
-        btn = findViewById(R.id.btnMenos);
-        btn.setEnabled(flag);
+        //btn = findViewById(R.id.btnMenos);
+        //btn.setEnabled(flag);
         btn = findViewById(R.id.btnPor);
         btn.setEnabled(flag);
     }
 
     public double evaluarExpresion(@NonNull String expresion) {
+
+        if (expresion.charAt(0) == '-') {
+            expresion = "0" + expresion;
+        }
+
         String[] tokens = expresion.split("[+\\-*/]");
         String[] operadores = expresion.split("[\\d.]+");
 

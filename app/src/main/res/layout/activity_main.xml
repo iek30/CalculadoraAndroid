@@ -238,7 +238,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#4CAF50"
-                android:enabled="false"
+                android:enabled="true"
                 android:minHeight="90dip"
                 android:onClick="clickSignos"
                 android:text="@string/menos"
