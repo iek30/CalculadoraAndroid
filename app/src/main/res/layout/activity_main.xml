@@ -5,7 +5,7 @@
     android:id="@+id/lyt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8CBDE4"
+    android:background="#D6E0E8"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,6 +14,7 @@
         android:layout_height="76dp"
         android:text="@string/pantalla"
         android:textAlignment="textEnd"
+        android:textColor="@color/black"
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"

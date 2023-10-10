@@ -52,25 +52,15 @@ public class MainActivity extends AppCompatActivity{
 
         habilitarSignos(true);
 
+        Button a = findViewById(R.id.btnCambioSigno);
+        a.setEnabled(false);
+
     }
 
     public void clickCambioSigno(View v){
-
-        if(oculta.split("[+\\-*/]").length == 1){
-            oculta = (Double.parseDouble(oculta)*-1) + "";
-            tv = findViewById(R.id.lblPantalla);
-            tv.setText(evaluarExpresion(oculta) + "");
-        }
-        else{
-            String [] aux = (oculta.split("[+\\-*/]"));
-            String[] operadores = oculta.split("[\\d.]+");
-            if (operadores[1].equals("*") || operadores[1].equals("/")) oculta ="-" + aux[0] + operadores[1] + (Double.parseDouble(aux[aux.length-1])) + "";
-            else if (operadores[1].equals("-")) oculta =aux[0] + "+" + (Double.parseDouble(aux[aux.length-1])) + "";
-            else if (operadores[1].equals("+")) oculta =aux[0] + "-" + (Double.parseDouble(aux[aux.length-1])) + "";
-            tv = findViewById(R.id.lblPantalla);
-            tv.setText(evaluarExpresion(oculta) + "");
-        }
-
+        oculta = (Double.parseDouble(oculta)*-1) + "";
+        tv = findViewById(R.id.lblPantalla);
+        tv.setText(evaluarExpresion(oculta) + "");
     }
 
     public void clickPunto(View v){
@@ -107,6 +97,8 @@ public class MainActivity extends AppCompatActivity{
             btn.setEnabled(true);
         }
 
+        Button a = findViewById(R.id.btnCambioSigno);
+        a.setEnabled(false);
     }
 
     //EVENTO DEL SIGNO "=".
@@ -121,6 +113,8 @@ public class MainActivity extends AppCompatActivity{
             oculta = "";
             habilitarSignos(false);
         }
+        Button a = findViewById(R.id.btnCambioSigno);
+        a.setEnabled(true);
     }
 
     //EVENTO DE "C".
@@ -158,8 +152,6 @@ public class MainActivity extends AppCompatActivity{
         btn = findViewById(R.id.btnMenos);
         btn.setEnabled(flag);
         btn = findViewById(R.id.btnPor);
-        btn.setEnabled(flag);
-        btn = findViewById(R.id.btnCambioSigno);
         btn.setEnabled(flag);
     }
 
