@@ -257,12 +257,25 @@
                 android:id="@+id/btnIgual"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:backgroundTint="#FFC107"
                 android:enabled="false"
                 android:minHeight="90dip"
                 android:onClick="mostrarResultado"
                 android:text="@string/igual"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnIgual2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:enabled="true"
+                android:minHeight="90dip"
+                android:onClick="clickCambioSigno"
+                android:text="@string/btnCambioSigno"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 

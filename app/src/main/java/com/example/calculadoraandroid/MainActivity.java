@@ -25,14 +25,17 @@ public class MainActivity extends AppCompatActivity{
 
     public void cambiarModoNocturno(View v){
         Switch s = findViewById(R.id.switchN);
+        tv = findViewById(R.id.lblPantalla);
         if(s.isChecked()) {
             findViewById(R.id.lyt).setBackgroundColor(getResources().getColor(R.color.black));
             s.setText("Dark");
+            tv.setTextColor(getResources().getColor(R.color.white));
             s.setTextColor(getResources().getColor(R.color.white));
         }
         else {
             findViewById(R.id.lyt).setBackgroundColor(getResources().getColor(R.color.white));
             s.setText("Light");
+            tv.setTextColor(getResources().getColor(R.color.black));
             s.setTextColor(getResources().getColor(R.color.black));
         }
     }
@@ -49,6 +52,12 @@ public class MainActivity extends AppCompatActivity{
 
         habilitarSignos(true);
 
+    }
+
+    public void clickCambioSigno(View v){
+        oculta = Math.abs(Integer.parseInt(oculta)) + "";
+        tv = findViewById(R.id.lblPantalla);
+        tv.setText(evaluarExpresion(oculta) + "");
     }
 
     public void clickPunto(View v){
