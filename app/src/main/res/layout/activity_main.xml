@@ -240,7 +240,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#4CAF50"
-                android:enabled="true"
+                android:enabled="false"
                 android:minHeight="90dip"
                 android:onClick="clickSignos"
                 android:text="@string/menos"
@@ -267,12 +267,12 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/btnIgual2"
+                android:id="@+id/btnCambioSigno"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#4CAF50"
-                android:enabled="true"
+                android:enabled="false"
                 android:minHeight="90dip"
                 android:onClick="clickCambioSigno"
                 android:text="@string/btnCambioSigno"
