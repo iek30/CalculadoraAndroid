@@ -42,49 +42,49 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/siete"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btn8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/ocho"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btn9"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/nueve"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btnMas"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="#004CAF50"
                 android:enabled="false"
                 android:minHeight="90dip"
                 android:onClick="clickSignos"
                 android:text="@string/mas"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#4CAF50"
+                android:textSize="34sp" />
 
         </TableRow>
 
@@ -97,49 +97,49 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/cuatro"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btn5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/cinco"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btn6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/seis"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btnPor"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="#004CAF50"
                 android:enabled="false"
                 android:minHeight="90dip"
                 android:onClick="clickSignos"
                 android:text="@string/mult"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#4CAF50"
+                android:textSize="34sp" />
         </TableRow>
 
         <TableRow
@@ -151,49 +151,49 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/uno"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btn2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/dos"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btn3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/tres"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btnDiv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="#004CAF50"
                 android:enabled="false"
                 android:minHeight="90dip"
                 android:onClick="clickSignos"
                 android:text="@string/dividir"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#4CAF50"
+                android:textSize="34sp" />
         </TableRow>
 
         <TableRow
@@ -205,48 +205,50 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#00673AB7"
                 android:minHeight="90dip"
                 android:onClick="clear"
                 android:text="@string/refresh"
-                android:textSize="24sp" />
+                android:textColor="#03A9F4"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btn0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#00FF5722"
                 android:minHeight="90dip"
                 android:onClick="clickNumeros"
                 android:text="@string/cero"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#FF5722"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btnPunto"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#3F51B5"
+                android:backgroundTint="#003F51B5"
                 android:enabled="true"
                 android:minHeight="90dip"
                 android:onClick="clickPunto"
                 android:text="@string/punto"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#03A9F4"
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/btnMenos"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="#004CAF50"
                 android:enabled="false"
                 android:minHeight="90dip"
                 android:onClick="clickSignos"
                 android:text="@string/menos"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#4CAF50"
+                android:textSize="34sp" />
 
         </TableRow>
 
@@ -259,25 +261,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:backgroundTint="#FFC107"
+                android:backgroundTint="#00FFC107"
                 android:enabled="false"
                 android:minHeight="90dip"
                 android:onClick="mostrarResultado"
                 android:text="@string/igual"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textColor="#673AB7"
+                android:textSize="34sp"
+                app:strokeColor="#673AB7"
+                app:strokeWidth="3dp" />
 
             <Button
                 android:id="@+id/btnCambioSigno"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="#004CAF50"
                 android:enabled="false"
                 android:minHeight="90dip"
                 android:onClick="clickCambioSigno"
                 android:text="@string/btnCambioSigno"
-                android:textColor="#FFFFFF"
+                android:textColor="#4CAF50"
                 android:textSize="24sp" />
 
         </TableRow>
