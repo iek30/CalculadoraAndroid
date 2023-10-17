@@ -22,5 +22,6 @@
     <string name="punto">.</string>
     <string name="refresh">C</string>
     <string name="btnCambioSigno">+/-</string>
+    <string name="borrar">" "</string>
 
 </resources>

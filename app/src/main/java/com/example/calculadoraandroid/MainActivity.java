@@ -126,8 +126,14 @@ public class MainActivity extends AppCompatActivity{
         habilitarSignos(false);
     }
 
-
-
+    public void borrar(View v){
+        if(!cadena.isEmpty() && !cadena.equals("0")) {
+            cadena = cadena.substring(0, cadena.length() - 1);
+            oculta = oculta.substring(0, oculta.length() - 1);
+        }
+        tv = findViewById(R.id.lblPantalla);
+        tv.setText(cadena);
+    }
 
     //FUNCIONES
 
